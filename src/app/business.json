@@ -1,0 +1,10 @@
+[
+  {"division": "Bethesda-Rockville-Frederick, MD Met Div", "date": "2000-02-01", "unemployment": 2.6},
+  {"division": "Bethesda-Rockville-Frederick, MD Met Div", "date": "2000-03-01", "unemployment": 3.6},
+  {"division": "Bethesda-Rockville-Frederick, MD Met Div", "date": "2000-04-01", "unemployment": 4.2},
+  {"division": "Bethesda-Rockville-Frederick, MD Met Div", "date": "2000-05-01", "unemployment": 2.3},
+  {"division": "Roc", "date": "2000-02-01", "unemployment": 3.6},
+  {"division": "Roc", "date": "2000-03-01", "unemployment": 4.6},
+  {"division": "Roc", "date": "2000-04-01", "unemployment": 5.2},
+  {"division": "Roc", "date": "2000-05-01", "unemployment": 6.3}
+]
