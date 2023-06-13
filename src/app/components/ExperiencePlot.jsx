@@ -2,31 +2,50 @@
 
 import * as Plot from "@observablehq/plot";
 import { useEffect, useRef, useState } from "react";
-import experience from "../data/experience-all.json";
-import experienceRust from "../data/experience-rust.json";
-import experienceCpp from "../data/experience-cpp.json";
-import experiencePython from "../data/experience-python.json";
-import experienceNode from "../data/experience-node.json";
+import experienceInfra from "../data/experience-infra.json";
+import experienceDev from "../data/experience-dev.json";
+import experienceGame from "../data/experience-game.json";
+import experienceSecond from "../data/experience-continued.json";
+import experienceData from "../data/experience-data.json";
 
-export default function ExamplePlotFigure(options) {
+export default function ExperiencePlotFigure(options) {
   const containerRef = useRef();
+  // data
+  const [infra, setInfra] = useState();
+  const [dev, setDev] = useState();
+  const [game, setGame] = useState();
+  const [continued, setContinued] = useState();
   const [data, setData] = useState();
 
-  const [rust, setRust] = useState();
-  const [cpp, setCpp] = useState();
-  const [python, setPython] = useState();
-  const [node, setNode] = useState();
+  // check boxes
+  const [infraChecked, setInfraChecked] = useState(true);
+  const [gameChecked, setGameChecked] = useState(true);
+  const [devChecked, setDevChecked] = useState(true);
+  const [dataChecked, setDataChecked] = useState(true);
 
   useEffect(() => {
-    setData(experience);
-    setRust(experienceRust);
-    setCpp(experienceCpp);
-    setPython(experiencePython);
-    setNode(experienceNode);
+    setInfra(experienceInfra);
+    setDev(experienceDev);
+    setGame(experienceGame);
+    setContinued(experienceSecond);
+    setData(experienceData);
   }, []);
 
+  const handleInfraCheck = () => {
+    setInfraChecked(!infraChecked)
+  };
+  const handleDevCheck = () => {
+    setDevChecked(!devChecked)
+  };
+  const handleGameCheck = () => {
+    setGameChecked(!gameChecked)
+  };
+  const handleDataCheck = () => {
+    setDataChecked(!dataChecked)
+  };
+
   useEffect(() => {
-    if (data === undefined) return;
+    if (infra === undefined || dev === undefined || game === undefined) return;
     const innerOptions = options.options;
     const plot = Plot.plot({
       ...innerOptions,
@@ -38,10 +57,20 @@ export default function ExamplePlotFigure(options) {
       x: {
         type: "point",
         grid: true,
-        tickFormat: ""
+        tickFormat: "",
+        label: null
       },
+      y: {
+        grid: true,
+        label: null
+      },
+      caption: "Figure 1. Years active in languages and frameworks.",
       marks: [
-        Plot.lineY(data, {x: "Year", y: "Language", stroke: "Language", strokeWidth: 5}) // all languages test
+        infraChecked ? Plot.lineY(infra, {x: "Year", y: "Language", stroke: "Language", strokeWidth: 5}) : null,
+        devChecked ? Plot.lineY(dev, {x: "Year", y: "Language", stroke: "Language", strokeWidth: 5}) : null,
+        devChecked ? Plot.lineY(continued, {x: "Year", y: "Language", stroke: "Language", strokeWidth: 5}) : null,
+        gameChecked ? Plot.lineY(game, {x: "Year", y: "Language", stroke: "Language", strokeWidth: 5}) : null,
+        dataChecked ? Plot.lineY(data, {x: "Year", y: "Language", stroke: "Language", strokeWidth: 5}) : null
         /*
         Plot.lineY(cpp, {x: "Date", y: "Language", stroke: "steelblue", strokeWidth: 5}),
         Plot.lineY(python, {x: "Date", y: "Language", stroke: "goldenrod", strokeWidth: 5}),
@@ -52,8 +81,46 @@ export default function ExamplePlotFigure(options) {
     });
     containerRef.current.append(plot);
     return () => plot.remove();
-  }, [data, options]);
+  }, [infra, dev, game, continued, data, options, infraChecked, gameChecked, devChecked, dataChecked]);
 
-  return <div className="plot" ref={containerRef} />
+  return (
+    <div className="experience-chart">
+      <div className="flags">
+        <input
+          type="checkbox"
+          className="experience-checkbox"
+          id="infra"
+          checked={infraChecked}
+          onChange={handleInfraCheck}
+        />
+        Infra
+        <input
+          type="checkbox"
+          className="experience-checkbox"
+          id="dev"
+          checked={devChecked}
+          onChange={handleDevCheck}
+        />
+        Professional
+        <input
+          type="checkbox"
+          className="experience-checkbox"
+          id="data"
+          checked={dataChecked}
+          onChange={handleDataCheck}
+        />
+        Data
+        <input
+          type="checkbox"
+          className="experience-checkbox"
+          id="game"
+          checked={gameChecked}
+          onChange={handleGameCheck}
+        />
+        Game
+      </div>
+      <div className="plot" ref={containerRef} />
+    </div>
+  );
 }
 

@@ -22,3 +22,13 @@ body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb))
 }
+
+.experience-checkbox {
+  margin-left: 12px;
+  margin-right: 6px;
+}
+
+.experience-chart {
+  margin-left: 25%;
+  margin-top: 50px;
+}
