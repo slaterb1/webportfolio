@@ -1,10 +1,11 @@
 import * as Plot from "@observablehq/plot";
+import TitleBlock from "./components/TitleBlock.jsx";
 import ExperiencePlotFigure from "./components/ExperiencePlot.jsx";
 
 export default function App() {
   return (
     <div>
-      <h1>Benjamin</h1>
+      <TitleBlock />
       <ExperiencePlotFigure 
         options={{
           marginTop: 20,
