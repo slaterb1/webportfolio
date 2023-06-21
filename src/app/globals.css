@@ -6,6 +6,7 @@
  * Background colour is set based on user preferences with 
  * this configuration
  *****************************************************/
+/*
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 211, 211, 211;
@@ -16,6 +17,12 @@
     --foreground-rgb: 255, 255, 255;
     --background-rgb: 85, 85, 85;
   }
+}
+*/
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 85, 85, 85;
 }
 
 body {
@@ -31,6 +38,7 @@ body {
 .experience-chart {
   margin: auto;
   width: 42%;
+  height: 680px;
 }
 
 .image-name-block {
@@ -40,12 +48,14 @@ body {
 
 .image-block {
   float: left;
+  border-width: 5px;
+  border-block-color: white;
 }
 
 .name-block {
   position: relative;
   top: 50px;
-  left: 100px;
+  left: 150px;
 }
 
 .profile-name {
@@ -72,4 +82,57 @@ body {
   padding-bottom: 10px;
   margin-left: 250px;
   margin-right: -250px;
+}
+
+.project-card-image-block {
+  float: left;
+  position: relative;
+  top: 5px;
+  left: 5px;
+}
+
+.project-showcase {
+  width: 42%;
+  margin: auto;
+  background: green;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.project-card {
+  margin: 10px 10px 30px 10px;
+  background: white;
+  color: black;
+  height: 500px;
+}
+
+.project-card-summary-block {
+  position: relative;
+  left: 15px;
+  top: 15px;
+}
+
+.project-card-description-block {
+  position: relative;
+  right: 497px;
+  top: 200px;
+}
+
+.project-card-tag {
+  background: aqua;
+  border-radius: 10px;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+  position: relative;
+  top: 15px;
+}
+
+.project-card-title-text {
+  font-size: larger;
+}
+
+.project-card-period {
+  font-style: italic;
 }

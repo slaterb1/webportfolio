@@ -1,6 +1,7 @@
 import * as Plot from "@observablehq/plot";
 import TitleBlock from "./components/TitleBlock.jsx";
 import ExperiencePlotFigure from "./components/ExperiencePlot.jsx";
+import ProjectShowcase from "./components/ProjectShowcase.jsx";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
           height: 600
         }}
       />
+      <ProjectShowcase />
     </div>
   );
 }
