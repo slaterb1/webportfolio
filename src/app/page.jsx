@@ -18,6 +18,7 @@ export default function App() {
         }}
       />
       <ProjectShowcase />
+      <footer>© 2023 Benjamin Slater</footer>
     </div>
   );
 }

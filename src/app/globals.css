@@ -103,7 +103,7 @@ body {
   margin: 10px 10px 30px 10px;
   background: white;
   color: black;
-  height: 500px;
+  height: 650px;
 }
 
 .project-card-summary-block {
@@ -116,6 +116,10 @@ body {
   position: relative;
   right: 497px;
   top: 200px;
+  margin-right: -492px;
+  margin-left:497px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .project-card-tag {
@@ -135,4 +139,10 @@ body {
 
 .project-card-period {
   font-style: italic;
+}
+
+footer {
+  text-align: center;
+  position: relative;
+  top: 15px;
 }

@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { Tag } from 'primereact/tag';
 
 export default function ProjectCard(props) {
-  console.log('imgLocation:', props.imgLocation)
   const img = props.imgLocation == null
     ? <div>
         <Image 
@@ -45,7 +44,7 @@ export default function ProjectCard(props) {
         {props.tags.map((item,i) => { return <span className="project-card-tag" key={i}>{item}</span> })}
       </div>
       <div className="project-card-description-block">
-        {props.description}
+        {props.description.map((item,i) => { return <p className="project-card-description-piece" key={i}>{item}<br/><br/></p> })}
       </div>
     </div>
   );
