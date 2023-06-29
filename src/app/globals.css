@@ -128,8 +128,8 @@ body {
 .project-card-language-tag {
   background: violet;
   border-radius: 10px;
-  padding-left: 2px;
-  padding-right: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
   margin-left: 2px;
   margin-right: 2px;
   position: relative;
@@ -139,8 +139,8 @@ body {
 .project-card-type-tag {
   background: aqua;
   border-radius: 10px;
-  padding-left: 2px;
-  padding-right: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
   margin-left: 2px;
   margin-right: 2px;
   position: relative;
