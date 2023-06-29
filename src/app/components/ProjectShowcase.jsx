@@ -23,7 +23,7 @@ export default function ProjectShowcase() {
     { value: '#data-processing', label: 'data-processing' },
     { value: '#elasticsearch', label: 'elasticsearch' },
     { value: '#sql', label: 'sql' },
-    { value: '#csvs', label: 'csvs' }
+    { value: '#csv', label: 'csv' }
   ];
   const selectedValues = [];
 
@@ -74,7 +74,7 @@ export default function ProjectShowcase() {
         outcome={'shelved'}
         source={'https://github.com/slaterb1/rettle'}
         languageTags={['#rust']}
-        typeTags={['#data-processing', '#opensource', '#elasticsearch', '#sql', '#csvs']}
+        typeTags={['#data-processing', '#opensource', '#elasticsearch', '#sql', '#csv']}
         imgLocation={rettleImage}
         languageTagsSelected={languageTags}
         typeTagsSelected={typeTags}
