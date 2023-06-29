@@ -39,6 +39,7 @@ body {
   margin: auto;
   width: 42%;
   height: 680px;
+  min-width: 1070px;
 }
 
 .image-name-block {
@@ -70,6 +71,7 @@ body {
   height: 470px;
   width: 42%;
   margin: auto;
+  min-width: 1070px;
 }
 
 .profile-socials {
@@ -94,9 +96,10 @@ body {
 .project-showcase {
   width: 42%;
   margin: auto;
-  background: green;
+  background: darkgray;
   padding-top: 2px;
   padding-bottom: 2px;
+  min-width: 1070px; 
 }
 
 .project-card {
@@ -122,7 +125,18 @@ body {
   padding-right: 15px;
 }
 
-.project-card-tag {
+.project-card-language-tag {
+  background: violet;
+  border-radius: 10px;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+  position: relative;
+  top: 15px;
+}
+
+.project-card-type-tag {
   background: aqua;
   border-radius: 10px;
   padding-left: 2px;
@@ -139,6 +153,11 @@ body {
 
 .project-card-period {
   font-style: italic;
+}
+
+.project-showcase-tag-selector {
+  color: black;
+  margin: 10px;
 }
 
 footer {

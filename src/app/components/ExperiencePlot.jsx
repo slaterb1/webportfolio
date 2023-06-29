@@ -52,7 +52,7 @@ export default function ExperiencePlotFigure(options) {
       style: {
         fill: "black", // effects ticks, font
         color: "black", // effects marks and ticks
-        background: "#d3d3d3" // plot background color "none" removes background
+        background: "rgb(234, 234, 234)" // plot background color "none" removes background
       },
       x: {
         type: "point",
