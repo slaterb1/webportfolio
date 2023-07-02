@@ -1,9 +1,9 @@
 import * as Plot from "@observablehq/plot";
-import TitleBlock from "./components/TitleBlock.jsx";
-import ExperiencePlotFigure from "./components/ExperiencePlot.jsx";
-import ProjectShowcase from "./components/ProjectShowcase.jsx";
+import TitleBlock from "../components/TitleBlock.jsx";
+import ExperiencePlotFigure from "../components/ExperiencePlot.jsx";
+import ProjectShowcase from "../components/ProjectShowcase.jsx";
 
-export default function App() {
+export default function Benjamin() {
   return (
     <div>
       <TitleBlock />
@@ -22,3 +22,4 @@ export default function App() {
     </div>
   );
 }
+

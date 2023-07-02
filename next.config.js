@@ -12,6 +12,15 @@ const nextConfig = {
         pathname: '/wikipedia/commons/1/14/No_Image_Available.jpg'
       }
     ]
+  },
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/benjamin',
+        permanent: true
+      }
+    ]
   }
 }
 
