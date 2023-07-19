@@ -160,6 +160,10 @@ body {
   margin: 10px;
 }
 
+.no-img-reference {
+  font-size: 10px;
+}
+
 footer {
   text-align: center;
   position: relative;

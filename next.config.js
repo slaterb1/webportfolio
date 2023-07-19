@@ -10,6 +10,11 @@ const nextConfig = {
         hostname: 'upload.wikimedia.org',
         port: '',
         pathname: '/wikipedia/commons/1/14/No_Image_Available.jpg'
+      },
+      {
+        protocol: 'https',
+        hostname: 'imgur.com',
+        port: ''
       }
     ]
   },
