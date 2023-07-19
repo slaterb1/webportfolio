@@ -52,7 +52,7 @@ export default function ProjectCard(props) {
         <div className="project-card-summary-block">
           <p className="project-card-title-text"><b>{props.title}</b></p>
           <p className="project-card-period-text">{props.started} - {props.updated}</p>
-          <p><a href={source} target="_blank">{sourceText}</a></p>
+          <p><b>Source:</b><a href={source} target="_blank"> {sourceText}</a></p>
           <p><b>Outcome:</b> {props.outcome}</p>
           {props.languageTags.map((item,i) => { return <span className="project-card-language-tag" key={i}>{item}</span> })}
           {props.typeTags.map((item,i) => { return <span className="project-card-type-tag" key={i}>{item}</span> })}
