@@ -7,6 +7,10 @@ import rettleImage from "./subcomponents/public/rettle_release_processing.png";
 import webportfolioImage from "./subcomponents/public/webportfolio_screenshot.png";
 import blogGif from "./subcomponents/public/blog_the_blob.gif";
 import splatterGif from "./subcomponents/public/top_down_splatter.gif";
+import blenderDoughnut from "./subcomponents/public/blender_doughnut.png";
+import blenderChair from "./subcomponents/public/blender_chair.png";
+import shaderWorld from "./subcomponents/public/shader_world.png";
+import pipeGame from "./subcomponents/public/pipegame.png";
 
 export default function ProjectShowcase() {
   const [languageTags, setLanguageTags] = useState([]);
@@ -61,7 +65,7 @@ export default function ProjectShowcase() {
         updated={'present'}
         outcome={'in development'}
         languageTags={['#java']}
-        typeTags={['#minecraft','#mod','#accessibility']}
+        typeTags={['#minecraft','#mod','#accessibility', '#forge', '#game-design']}
         imgLocation={'https://imgur.com/BgpO4Y0.gif'}
         languageTagsSelected={languageTags}
         typeTagsSelected={typeTags}
@@ -73,13 +77,62 @@ export default function ProjectShowcase() {
         updated={'present'}
         outcome={'released'}
         languageTags={['#java']}
-        typeTags={['#minecraft','#mod','#accessibility', '#twitch']}
+        typeTags={['#minecraft','#mod','#accessibility', '#twitch', '#forge', '#fabric', '#game-design']}
         imgLocation={'https://imgur.com/zA7xjBF.gif'}
         source={'https://legacy.curseforge.com/minecraft/mc-mods/twitch-chat-in-game-chat'}
         sourceText='twitch-chat-in-game-chat'
         languageTagsSelected={languageTags}
         typeTagsSelected={typeTags}
         description={[' The goal of this mod was to be able to include Twitch chat in the Minecraft chat to allow the streamer to be able to keep up with chat all in one place. Emotes, badges, and twitch username colours are included in the messages. I made the twitch chat colour a darker grey than regular chat to allow in game chat to still pop and not be missed by the player.', '  To make this mod work, I packaged a small server into Minecraft, which interfaces with Twitch to refresh tokens and handle pulling the streamers channel badges. I also packaged in a websocket client to use the irc client set by Twitch. This was a very difficult project that required digging through Minecraft source code to work out how to share the ingame chat and font formatting.']}
+      />
+      <ProjectCard
+        title={'Pick Block But For Tools Mod'}
+        started={'Feb 2022'}
+        updated={'present'}
+        outcome={'released'}
+        languageTags={['#java']}
+        typeTags={['#minecraft','#mod','#accessibility', '#forge', '#fabric', '#game-design']}
+        imgLocation={'https://imgur.com/NSVACO4.gif'}
+        source={'https://legacy.curseforge.com/minecraft/mc-mods/pick-block-but-for-tools'}
+        sourceText='pick-block-but-for-tools'
+        languageTagsSelected={languageTags}
+        typeTagsSelected={typeTags}
+        description={[' This was my first Minecraft mod, built first for Fabric, and then I ported it to Forge to improve accessibility. This mod extends the quick pick block feature, by allowing you to pick the best tool in your inventory to break or silk touch the block you clicked on. The idea for this mod came from my partner, as they were an active builder and wanted a better way to switch from building blocks to your tools to remove blocks for terraforming. This mod has 1000+ downloads.']}
+      />
+      <ProjectCard
+        title={'Vault Custom Room Update Mod'}
+        started={'Feb 2023'}
+        updated={'present'}
+        outcome={'on private server'}
+        languageTags={['#java']}
+        typeTags={['#minecraft','#mod', '#forge', '#vaulthunters', '#mixin']}
+        imgLocation={'https://imgur.com/kx7acwS.gif'}
+        languageTagsSelected={languageTags}
+        typeTagsSelected={typeTags}
+        description={[' This was a mixin mod to update the config loader inside the Vault Hunters 3rd Edition mod to add some new themes and custom built rooms. The group that I was playing Vault Hunters 2nd Edition with wanted to build our own rooms since early 2022. The style of vaults changed a lot in this edition and we missed the more random layouts, which made the game great. This mod was difficult to build and I set it up to merge the new configs for this mod with the existing configsof Vault Hunters to reduce the amount of rework, and to still get new rooms being added by the team when they released new versions of the pack. I also added new commands to let the players change settings in game and turn off the mod if they want to use default rooms and themes instead.', '  This mod was successful and allowed us to play with random theme variants and integrate our own rooms into the room pools. This mod is running on a private owned server and we all got more playtime in the pack because of it.']}
+      />
+      <ProjectCard
+        title={'VH Friends Mod'}
+        started={'Aug 2022'}
+        updated={'present'}
+        outcome={'on private server'}
+        languageTags={['#java']}
+        typeTags={['#minecraft','#mod', '#forge', '#vaulthunters', '#mixin', '#game-design']}
+        imgLocation={'https://imgur.com/IuZq8vB.gif'}
+        languageTagsSelected={languageTags}
+        typeTagsSelected={typeTags}
+        description={[' This was a mixin that I originally created for Vault Hunters 2nd Edition, then extended it to 3rd Edition. I was apart of a larger Vault Hunters community discord and a lot of players wanted to be able to see each other as enemies, statues, and vendors in their respective games. The mod itself is pretty simple, it just added to an existing "getPlayerSkin" functionality to add a list of player names for people that wanted to be included. My 3rd Edition version was more complex in that I allowed for in game commands to add and remove players from the list. I included a general server wide list that applied to everyone, as well as individual lists per player to allow streamers to have redemtions to add viewer skins as mob enemies in game.', ' I released the 2nd Edition version of the mod to the Vault Hunters community discord. The 3rd edition one I only put on the private server.']}
+      />
+      <ProjectCard
+        title={'VH Coop Improved Mod'}
+        started={'Apr 2023'}
+        updated={'July 2023'}
+        outcome={'released'}
+        languageTags={['#java']}
+        typeTags={['#minecraft','#mod', '#forge', '#vaulthunters', '#mixin', '#game-design']}
+        languageTagsSelected={languageTags}
+        typeTagsSelected={typeTags}
+        description={[' This mixin mod was a reaction to one of the changes made by the official Vault Hunters team. They made the decision to reduce the amount of loot that a player recieves if they are at a higher level than the vault they are in. The community did not like this change, as it made running vaults with lower level friends at their level, not fun. Not everyone can invest as much time into the game as others, so player levels will drift apart as a season goes on. The game does offer casual mode and casual game rules but did not allow players to opt out of this change. I created this mod to remove this change and it increased the amount of coop play that our server had, which was the main reason everyone liked Vault Hunters 2nd Edition, running vaults with friends. I released this mod to the Vault Hunters community discord.']}
       />
       <ProjectCard
         title={'Webportfolio'}
@@ -94,6 +147,77 @@ export default function ProjectShowcase() {
         typeTagsSelected={typeTags}
         description={[' Goal of this project was to build out an interactive webportfolio to highlight my experience as well as projects that I have been working on in my spare time. I have tinkered with React in the past, but never Nextjs and wanted to take this opportunity to try it out. In years past I spent months designing custom d3 plots for work and wanted to use that technology to build the graph displaying my years of experience across multiple languages and frameworks. It was challenging to fit all technologies in the graph in a readable way, so I limited it to ones I thought would be most relavent.',
           '  The project card showcase was an idea I had to allow people to filter my projects and see everything in reverse chronological order. Overall I was very satisfied by the outcome, and incorporated all my own css design choices.']}
+      />
+      <ProjectCard
+        title={'Minecraft Custom Model Renderers'}
+        started={'Jan 2022'}
+        updated={'Oct 2022'}
+        outcome={'released to friends'}
+        languageTags={['#blockbench']}
+        typeTags={['#minecraft','#resourcepack', '#modelling', '#game-design']}
+        imgLocation={'https://imgur.com/z9OgvV4.gif'}
+        languageTagsSelected={languageTags}
+        typeTagsSelected={typeTags}
+        description={[' I wanted to practice game asset modelling and was playing quite a bit of Vanilla Minecraft with friends at the time. Blockbench was officially released as a toolset by the Mojang team and I wanted to learn this toolkit as well. Using Blockbench, I designed a custom crossbow with loading animations, 2D (retexture) and 3D (model) custom swords, as well as some tools like shovels and hoes. I packed up my models as a resource pack and provided it to friends. By using the optifine mod in game, I was able to include rules for when the new models should be rendered, for example if a crossbow was named "Pierson" it would render as the custom model. I also experimented with changing up the Villager skins to custom full skin retextures.']}
+      />
+      <ProjectCard
+        title={'Pipe Game'}
+        started={'Dec 2021'}
+        updated={'Jan 2022'}
+        outcome={'shelved'}
+        languageTags={['#unity', '#c#', '#rust', '#blender']}
+        typeTags={['#puzzle', '#game-design', '#modelling']}
+        imgLocation={pipeGame}
+        languageTagsSelected={languageTags}
+        typeTagsSelected={typeTags}
+        description={[' The goal for this project was to make a simple mobile puzzle game that would be relaxing for users to play. I set it up to work with 2D and 3D puzzles. The 3D puzzles would have layers that you have to turn and twist the puzzle and cycle through the layers to access the pipes and rotate them. I created pipes for use in the game in Blender and imported them to the Unity project. I also created a puzzle randomizer in Rust to autogenerate levels to be loaded in the game when the puzzle starts.', ' I plan to release the 2D version for free and make the 3D puzzles a paid feature, with some animation upon completing the puzzle. There is quite a bit more work to do, but I got tied up with another game project. This is shelved for now, but might come back and finish a version of it for release.']}
+      />
+      <ProjectCard
+        title={'Blender Chair'}
+        started={'Sept 2021'}
+        updated={'Sept 2021'}
+        outcome={'complete'}
+        languageTags={['#blender']}
+        typeTags={['#modelling', '#game-design']}
+        imgLocation={blenderChair}
+        languageTagsSelected={languageTags}
+        typeTagsSelected={typeTags}
+        description={[' This project was following Blender Guru\'s chair tutorial (https://www.youtube.com/@blenderguru). This was a more complex multihour project that had more room for experimentation. Throughout the tutorial it would close the session video by assigning "homework" to be done before the next part. I was able to successfully complete each section, and some of the simplifications that I made, ended up being recommended revisions in later parts.']}
+      />
+      <ProjectCard
+        title={'Shaders Development/Testing'}
+        started={'May 2021'}
+        updated={'Aug 2021'}
+        outcome={'still in development'}
+        languageTags={['#unity']}
+        typeTags={['#shaders', '#shaderlab']}
+        imgLocation={shaderWorld}
+        languageTagsSelected={languageTags}
+        typeTagsSelected={typeTags}
+        description={[' After starting a few projects in Unity, I opted to study shaders and practice their implementation. I have a Unity project dedicated to simple shapes with various shaders applied. I have shaders for "collectibles" that rotate and bounce in place, shaders that make objects materialize and dematerialize, as well as toon based vectorization. I use this space to test out visualizations for future games. I also implemented Journey based shaders to create "ocean sand currents" based on a tutorial by Alan Zucconi (https://www.alanzucconi.com/2019/10/08/journey-sand-shader-1/).']}
+      />
+      <ProjectCard
+        title={'Blender Doughnut'}
+        started={'Aug 2021'}
+        updated={'Aug 2021'}
+        outcome={'complete'}
+        languageTags={['#blender']}
+        typeTags={['#modelling', '#game-design']}
+        imgLocation={blenderDoughnut}
+        languageTagsSelected={languageTags}
+        typeTagsSelected={typeTags}
+        description={[' This was my first Blender project. I chose to follow Blender Guru\'s doughnut tutorial (https://www.youtube.com/@blenderguru). Did not change too much from the tutorial but opted to try to make a hard shell chocolate glaze on top.']}
+      />
+      <ProjectCard
+        title={'Banjo Game Engine'}
+        started={'Apr 2020'}
+        updated={'Jan 2021'}
+        outcome={'shelved'}
+        languageTags={['#rust']}
+        typeTags={['#engine', '#game-design', '#gtk']}
+        languageTagsSelected={languageTags}
+        typeTagsSelected={typeTags}
+        description={[' I had previously done some game design work in Rust and wanted to try building a new Rust game engine for personal use to save on license costs. Amethyst is a great Rust engine but does not have an intuitive user interface like Unity, which has sped up my game design. This was sorta a side project and I spent some time working in gtk to build out a basic file menu interface. I definitely want to go this route in the future, but plan to have a couple game releases using Unity or UnrealEngine before takling this project. For that reason, I have shelved this project.']}
       />
       <ProjectCard
         title={'Blog the Blob'}
