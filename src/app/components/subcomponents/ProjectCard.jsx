@@ -31,7 +31,7 @@ export default function ProjectCard(props) {
         src={props.imgLocation}
         alt="project image"
         height={350}
-        width={512}
+        width={props.imgWidth ? props.imgWidth : 512}
       />;
 
   const source = props.source == null ? '' : props.source;

@@ -10,7 +10,9 @@ import splatterGif from "./subcomponents/public/top_down_splatter.gif";
 import blenderDoughnut from "./subcomponents/public/blender_doughnut.png";
 import blenderChair from "./subcomponents/public/blender_chair.png";
 import shaderWorld from "./subcomponents/public/shader_world.png";
-import pipeGame from "./subcomponents/public/pipegame.png";
+import pipeGame from "./subcomponents/public/pipegame.gif";
+import noiseGenPython from "./subcomponents/public/python-noise-gen.png";
+import noiseGenRust from "./subcomponents/public/rust-noise-gen.png";
 
 export default function ProjectShowcase() {
   const [languageTags, setLanguageTags] = useState([]);
@@ -22,6 +24,7 @@ export default function ProjectShowcase() {
     { value: '#d3', label: 'd3' }
   ];
   const typeOptions = [
+    { value: '#game-design', label: 'game-design' },
     { value: '#data-visualization', label: 'data-visualization' },
     { value: '#design', label: 'design' },
     { value: '#modeling', label: 'modeling' },
@@ -77,7 +80,7 @@ export default function ProjectShowcase() {
         updated={'present'}
         outcome={'released'}
         languageTags={['#java']}
-        typeTags={['#minecraft','#mod','#accessibility', '#twitch', '#forge', '#fabric', '#game-design']}
+        typeTags={['#minecraft','#mod','#twitch','#forge','#fabric','#game-design']}
         imgLocation={'https://imgur.com/zA7xjBF.gif'}
         source={'https://legacy.curseforge.com/minecraft/mc-mods/twitch-chat-in-game-chat'}
         sourceText='twitch-chat-in-game-chat'
@@ -132,7 +135,43 @@ export default function ProjectShowcase() {
         typeTags={['#minecraft','#mod', '#forge', '#vaulthunters', '#mixin', '#game-design']}
         languageTagsSelected={languageTags}
         typeTagsSelected={typeTags}
-        description={[' This mixin mod was a reaction to one of the changes made by the official Vault Hunters team. They made the decision to reduce the amount of loot that a player recieves if they are at a higher level than the vault they are in. The community did not like this change, as it made running vaults with lower level friends at their level, not fun. Not everyone can invest as much time into the game as others, so player levels will drift apart as a season goes on. The game does offer casual mode and casual game rules but did not allow players to opt out of this change. I created this mod to remove this change and it increased the amount of coop play that our server had, which was the main reason everyone liked Vault Hunters 2nd Edition, running vaults with friends. I released this mod to the Vault Hunters community discord.']}
+        description={[' This mixin mod was a reaction to one of the changes made by the official Vault Hunters team. They made the decision to reduce the amount of loot that a player recieves if they are at a higher level than the vault they are in. The community did not like this change, as it made running vaults with lower level friends at their level, not fun. Not everyone can invest as much time into the game as others, so player levels will drift apart as a season goes on. The game does offer casual mode and casual game rules but did not allow players to opt out of this change. I created this mod to remove this change and it increased the amount of coop play that our server had, which was the main reason everyone liked Vault Hunters 2nd Edition, running vaults with friends. I released this mod to the Vault Hunters community discord. Update 11, introduced the game rule to remove the scaling change, so I no longer need to keep this mod updated.']}
+      />
+      <ProjectCard
+        title={'Patchwork Totems Mod'}
+        started={'Jan 2023'}
+        updated={'Feb 2023'}
+        outcome={'released'}
+        languageTags={['#java', '#blockbench']}
+        typeTags={['#minecraft','#mod','#forge','#game-design']}
+        imgLocation={'https://imgur.com/2WKGcAL.gif'}
+        languageTagsSelected={languageTags}
+        typeTagsSelected={typeTags}
+        source={'https://legacy.curseforge.com/minecraft/mc-mods/patchworktotems'}
+        sourceText='patchworktotems'
+        description={[' My Patchwork Totems mod allows players to sew patches onto their totems of undying and enderpearls to regain their Vanilla behaviours. I also extended this mod to allow players to trade patterns for protection enchantment books. The decision for this mod was to counter mods removing Vanilla Minecraft features that players have grown accustomed too and use in their toolkit to survive. The Vault Hunters 3rd Edition mod removed these Vanilla items and players wanted them back, so I wrote the mod and distributed on Curseforge.', '  In addition to adding in game menus and the mechanics to use the items, I made a 3D model for the sewing machine block that us used in game.']}
+      />
+      <ProjectCard
+        title={'Timeout Extender Mod'}
+        started={'Feb 2023'}
+        updated={'Feb 2023'}
+        outcome={'private template repo'}
+        languageTags={['#java']}
+        typeTags={['#minecraft','#mixin','#forge','#game-design']}
+        languageTagsSelected={languageTags}
+        typeTagsSelected={typeTags}
+        description={[' Modded Minecraft needs to send a lot of data between the client and server, so players tend to get timeout exceptions on joining the server or kicked if they cannot send data back within a time limit set for Vanilla. So I wrote a small mixin mod that increases the timeout threshold. The mod also has new commands in game to let users update the thresholds as needed.']}
+      />
+      <ProjectCard
+        title={'Minecraft Mixin Template'}
+        started={'Aug 2022'}
+        updated={'Feb 2023'}
+        outcome={'private template repo'}
+        languageTags={['#java']}
+        typeTags={['#minecraft','#mixin','#forge','#game-design']}
+        languageTagsSelected={languageTags}
+        typeTagsSelected={typeTags}
+        description={[' Because I planned on writing a few mixin mods and the setup is confusing, I chose to build out a template repo in Github for Minecraft version 1.16.5 and 1.18.2. I have used this template on a number of projects that came after this.']}
       />
       <ProjectCard
         title={'Webportfolio'}
@@ -149,6 +188,17 @@ export default function ProjectShowcase() {
           '  The project card showcase was an idea I had to allow people to filter my projects and see everything in reverse chronological order. Overall I was very satisfied by the outcome, and incorporated all my own css design choices.']}
       />
       <ProjectCard
+        title={'Twitch VH Commands Mod'}
+        started={'Sept 2022'}
+        updated={'Sept 2022'}
+        outcome={'private mod'}
+        languageTags={['#java']}
+        typeTags={['#minecraft','#twitch','#forge','#game-design']}
+        languageTagsSelected={languageTags}
+        typeTagsSelected={typeTags}
+        description={[' This mod was the first extension mod that I built for the twitch integration mod. It extends the irc client to listen for Twitch viewers sending commands registered to the game. Vault Hunters 2nd Edition included architect vaults that let viewers vote on which rooms to add to a vault as the streamer runs it. The tools for it was never released with the vault hunters mod, so I implemented one myself. It works with multiple streamers too as long as they have the twitch integration mod included in their mods. Myself, YerFriendGraph, and ThisIsLammyPi successfully ran a few architect vaults on stream with viewers. I recently released the twitch integration mod, so I will likely release this mod as well.']}
+      />
+      <ProjectCard
         title={'Minecraft Custom Model Renderers'}
         started={'Jan 2022'}
         updated={'Oct 2022'}
@@ -159,6 +209,34 @@ export default function ProjectShowcase() {
         languageTagsSelected={languageTags}
         typeTagsSelected={typeTags}
         description={[' I wanted to practice game asset modelling and was playing quite a bit of Vanilla Minecraft with friends at the time. Blockbench was officially released as a toolset by the Mojang team and I wanted to learn this toolkit as well. Using Blockbench, I designed a custom crossbow with loading animations, 2D (retexture) and 3D (model) custom swords, as well as some tools like shovels and hoes. I packed up my models as a resource pack and provided it to friends. By using the optifine mod in game, I was able to include rules for when the new models should be rendered, for example if a crossbow was named "Pierson" it would render as the custom model. I also experimented with changing up the Villager skins to custom full skin retextures.']}
+      />
+      <ProjectCard
+        title={'Random Noise Generator CLI Tool Rust'}
+        started={'Aug 2021'}
+        updated={'Aug 2021'}
+        outcome={'private repo'}
+        languageTags={['#rust']}
+        typeTags={['#shaders', '#game-design']}
+        imgWidth={400}
+        imgLocation={noiseGenRust}
+        source={'https://github.com/Raindog-Games/img-noise'}
+        languageTagsSelected={languageTags}
+        typeTagsSelected={typeTags}
+        description={[' This was a follow up project to my Python CLI tool. I found an opensource Rust based noise generator for multiple noise type generators and decided to wrap it into a CLI tool for myself to continue shader development. Perlin noise computations can get very expensive in terms of computation time when using higher order iterators. Rust is incredibly efficient so it worked much better for building out more complicated noise images.']}
+      />
+      <ProjectCard
+        title={'Random Noise Generator CLI Tool Python'}
+        started={'July 2021'}
+        updated={'Aug 2021'}
+        outcome={'released'}
+        languageTags={['#python']}
+        typeTags={['#shaders', '#game-design', '#pypi']}
+        imgWidth={325}
+        imgLocation={noiseGenPython}
+        source={'https://pypi.org/project/noise-img-generator/'}
+        languageTagsSelected={languageTags}
+        typeTagsSelected={typeTags}
+        description={[' This project came out of a need to create random noise to assist shader development. I used this for perlin and random matrix noise to create defects on materials. This is a command line interface tool that lets the user run a command to output and save a noise image with whatever name the user chooses.']}
       />
       <ProjectCard
         title={'Pipe Game'}
@@ -182,6 +260,7 @@ export default function ProjectShowcase() {
         imgLocation={blenderChair}
         languageTagsSelected={languageTags}
         typeTagsSelected={typeTags}
+        imgWidth={400}
         description={[' This project was following Blender Guru\'s chair tutorial (https://www.youtube.com/@blenderguru). This was a more complex multihour project that had more room for experimentation. Throughout the tutorial it would close the session video by assigning "homework" to be done before the next part. I was able to successfully complete each section, and some of the simplifications that I made, ended up being recommended revisions in later parts.']}
       />
       <ProjectCard
@@ -206,7 +285,32 @@ export default function ProjectShowcase() {
         imgLocation={blenderDoughnut}
         languageTagsSelected={languageTags}
         typeTagsSelected={typeTags}
+        imgWidth={400}
         description={[' This was my first Blender project. I chose to follow Blender Guru\'s doughnut tutorial (https://www.youtube.com/@blenderguru). Did not change too much from the tutorial but opted to try to make a hard shell chocolate glaze on top.']}
+      />
+      <ProjectCard
+        title={'Fastify-Pubsub'}
+        started={'Dec 2021'}
+        updated={'Dec 2021'}
+        outcome={'released'}
+        source={'https://www.npmjs.com/package/fastify-pubsub'}
+        languageTags={['#node']}
+        typeTags={['#distributed', '#opensource', '#fastify', '#npm']}
+        languageTagsSelected={languageTags}
+        typeTagsSelected={typeTags}
+        description={[' I created this to solve a distributed data problem for work. I needed a plugin that simplified setting up a pub/sub connection using Redis as a broker. Fastify has a great Redis plugin but no support for a pub/sub connection. This project did not take long and I was able to use it for work as well as release it through npm.']}
+      />
+      <ProjectCard
+        title={'Simple-Es'}
+        started={'Jan 2020'}
+        updated={'Aug 2021'}
+        outcome={'shelved'}
+        source={'https://github.com/slaterb1/simple-es'}
+        languageTags={['#rust']}
+        typeTags={['#data-processing', '#opensource', '#elasticsearch']}
+        languageTagsSelected={languageTags}
+        typeTagsSelected={typeTags}
+        description={[' Around the time when I was working on Rettle, I wanted to make Elasticsearch one of the first source and sink libraries to interface with. However, at this time there was not an easy client and Elasticsearch was not going to support ES 5.6, only more modern clients. So I made it my own objective to create a Rust based client for Elasticsearch that supported 5.6+. I built it out as a tokio async client that allowed the user to create json query strings to apply the action with filters in an easier way.', ' I worked on this project for a good chunk of time but eventually the official Elasticsearch team paired with one of the existing clients that needed some help. That official project made the same decisions that I did in terms of simple user defined queries, so I did not find the need as much to complete this project and opted to shelve it and work on other projects. I was able to use the base version that I created with the Rettle project which unblocked that at the time of development here.']}
       />
       <ProjectCard
         title={'Banjo Game Engine'}
@@ -256,6 +360,28 @@ export default function ProjectShowcase() {
         typeTagsSelected={typeTags}
         description={[' In this project I built a complete Extract, Transform, Load system in Rust to process data. Around this time I was doing a lot of work with Logstash to clean up data and populate indexes in Elasticsearch, and thought that it could be done better in a systems level language, plus wanted to learn Rust. The project ended up being a success and I had a "simplified" system modelled on Keras to allow the developer to think about the layers they were adding for transforms, or pushes to other systems. I named it rettle like "kettle" because is used a tea brewing analogy for the stages, i.e. fill for extract, or steep for transform. I had a number of companion projects to handle various data sinks or sources like csvs, or elasticsearch.',
           ' In the end I shelved the project because it was a lot of work and the user needed to map all the data shapes for the Rust compiler to allow it to build and run. There is still a lot of potential in this project and later versions of Rust might better accomplish some of the reworks I was planning to make the system even simpler, but it is not something that interests me at this time.']}
+      />
+      <ProjectCard
+        title={'Rift'}
+        started={'Sept 2019'}
+        updated={'Apr 2020'}
+        outcome={'shelved'}
+        languageTags={['#rust']}
+        typeTags={['#game-design', '#amethyst']}
+        languageTagsSelected={languageTags}
+        typeTagsSelected={typeTags}
+        description={[' After doing some more research into game design tools, I found that Rust had better support for it. This was before I took the time to learn Rust via the Rust Book, but I was still able to translate the code I had in place for Golang into Rust using the Amethyst game engine. Super passionate about this game idea, but I have shelved it until I have more game design experience and can tackle this on my own or with a small team.', ' For more information about Rift, check out my entry "Rift in Go"']}
+      />
+      <ProjectCard
+        title={'Rift in Go'}
+        started={'Jan 2019'}
+        updated={'Mar 2019'}
+        outcome={'closed'}
+        languageTags={['#golang']}
+        typeTags={['#game-design']}
+        languageTagsSelected={languageTags}
+        typeTagsSelected={typeTags}
+        description={[' I was playing a lot of roguelite games around this time and realized that there was not a roguelite turn based strategy game, and I think it would make for a very satisfying cross genre. This project was mostly research and planning. I have a few notebooks where I have written out the job trees, map generation, and randomization to balance the strategic portions and the roguelite "react based on what is being given to the player randomly".', ' I am just as excited about this project today as I was when I originally had the idea, but I want to get more experience in game design first before attempting this project. It will kinda be a like Final Fantasy Tactics for PSX with randomization factors for maps and characters that join you as you get closer to the chaos that is the Rift. I started this project in Golang as I did not want to start game design in C++ or C# at this time. Golang had some good tools for 2D game development. I moved this project over to Rust after discovering that it has a much broader and deeper set of tools and packages for game development.']}
       />
       <ProjectCard
         title={'Voyager Travel App'}
