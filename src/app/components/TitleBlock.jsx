@@ -15,12 +15,12 @@ export default function TitleBlock() {
           />
         </div>
         <div className="name-block">
-          <h className="profile-name">BENJAMIN<br/>SLATER</h>
-          <p className="profile-pronouns">(they/them)</p>
+          <h className="profile-name">BENJAMIN SLATER</h>
         </div>
       </div>
       <div className="profile-socials">
-        <p>benjamin.ed.slater@gmail.com</p>
+        <p>Email: benjamin.ed.slater@gmail.com</p>
+        <p>Pronouns: (they/them)</p>
         <p>Github: <a href="https://github.com/slaterb1" target="_blank">slaterb1</a></p>
         <p>Curseforge: <a href="https://legacy.curseforge.com/members/UmamiKin/projects" target="_blank">UmamiKin</a></p>
       </div>
