@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import raindogLogo from "./public/raindog_logo.gif";
 
 function containsTag(cardTags, selectedTags) {
   console.log('cardTags:', cardTags);
@@ -16,17 +17,12 @@ function containsTag(cardTags, selectedTags) {
 
 export default function ProjectCard(props) {
   const img = props.imgLocation == null
-    ? <div className='project-card-no-image'>
-        <Image 
-          src="https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg"
-          alt="no image available"
-          height={350}
-          width={256}
-        />
-        <div className="no-img-reference">
-          <a href="https://commons.wikimedia.org/wiki/File:No_Image_Available.jpg">Col pr</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
-        </div>
-      </div>
+    ? <Image 
+        src={raindogLogo}
+        alt="no image available"
+        height={350}
+        width={450}
+      />
     : <Image 
         src={props.imgLocation}
         alt="project image"
