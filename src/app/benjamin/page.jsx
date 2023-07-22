@@ -1,5 +1,6 @@
 import * as Plot from "@observablehq/plot";
 import TitleBlock from "../components/TitleBlock.jsx";
+import IntroBlock from "../components/IntroBlock.jsx";
 import ExperiencePlotFigure from "../components/ExperiencePlot.jsx";
 import ProjectShowcase from "../components/ProjectShowcase.jsx";
 
@@ -7,6 +8,7 @@ export default function Benjamin() {
   return (
     <div>
       <TitleBlock />
+      <IntroBlock />
       <ExperiencePlotFigure 
         options={{
           marginTop: 20,

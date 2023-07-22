@@ -2,6 +2,10 @@
 
 import Image from 'next/image'
 import profilePic from './public/minimized_side_profile.jpg'
+import emailLogo from './public/email-logo.png';
+import personLogo from './public/person-logo.png';
+import githubLogo from './public/github-mark.png';
+import curseforgeLogo from './public/curseforge-logo.png';
 
 export default function TitleBlock() {
   return (
@@ -15,14 +19,39 @@ export default function TitleBlock() {
           />
         </div>
         <div className="name-block">
-          <h className="profile-name">BENJAMIN<br/>SLATER</h>
-          <p className="profile-pronouns">(they/them)</p>
+          <h className="profile-name">BENJAMIN SLATER</h>
         </div>
       </div>
       <div className="profile-socials">
-        <p>benjamin.ed.slater@gmail.com</p>
-        <p>Github: <a href="https://github.com/slaterb1" target="_blank">slaterb1</a></p>
-        <p>Curseforge: <a href="https://legacy.curseforge.com/members/UmamiKin/projects" target="_blank">UmamiKin</a></p>
+        <p>
+        <Image
+          className="profile-logo-img"
+          src={emailLogo}
+          alt="email-img"
+          height={16}
+        />: benjamin.ed.slater@gmail.com</p>
+        <p>
+        <Image
+          className="profile-logo-img"
+          src={personLogo}
+          alt="person-img"
+          height={16}
+        />: (they/them)</p>
+        <p>
+        <Image
+          className="profile-logo-img"
+          src={githubLogo}
+          alt="github-img"
+          height={16}
+        />: <a href="https://github.com/slaterb1" target="_blank">slaterb1</a></p>
+        <p>
+        <Image
+          id="curseforge-logo"
+          className="profile-logo-img"
+          src={curseforgeLogo}
+          alt="curseforge-img"
+          width={16}
+        />: <a href="https://legacy.curseforge.com/members/UmamiKin/projects" target="_blank">UmamiKin</a></p>
       </div>
     </div>
   );
