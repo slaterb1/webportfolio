@@ -34,6 +34,15 @@ body {
   margin-bottom: 20px;
 }
 
+#curseforge-logo {
+  padding-top: 8px;
+}
+
+.profile-logo-img {
+  float: left;
+  padding-top: 4px;
+}
+
 .experience-checkbox {
   margin-left: 12px;
   margin-right: 6px;
