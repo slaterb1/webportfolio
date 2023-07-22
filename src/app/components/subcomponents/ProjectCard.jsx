@@ -16,7 +16,7 @@ function containsTag(cardTags, selectedTags) {
 
 export default function ProjectCard(props) {
   const img = props.imgLocation == null
-    ? <div>
+    ? <div className='project-card-no-image'>
         <Image 
           src="https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg"
           alt="no image available"
@@ -54,8 +54,10 @@ export default function ProjectCard(props) {
           <p className="project-card-period-text">{props.started} - {props.updated}</p>
           <p><b>Source:</b><a href={source} target="_blank"> {sourceText}</a></p>
           <p><b>Outcome:</b> {props.outcome}</p>
-          {props.languageTags.map((item,i) => { return <span className="project-card-language-tag" key={i}>{item}</span> })}
-          {props.typeTags.map((item,i) => { return <span className="project-card-type-tag" key={i}>{item}</span> })}
+          <div className="project-card-tag-block">
+            {props.languageTags.map((item,i) => { return <span className="project-card-language-tag" key={i}>{item}</span> })}
+            {props.typeTags.map((item,i) => { return <span className="project-card-type-tag" key={i}>{item}</span> })}
+          </div>
         </div>
         <div className="project-card-description-block">
           {props.description.map((item,i) => { return <p className="project-card-description-piece" key={i}>{item}<br/><br/></p> })}
