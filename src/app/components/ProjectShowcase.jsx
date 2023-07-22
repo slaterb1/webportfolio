@@ -28,6 +28,7 @@ export default function ProjectShowcase() {
     { value: '#node', label: 'node' },
     { value: '#golang', label: 'golang' },
     { value: '#python', label: 'python' },
+    { value: '#c++', label: 'c++' },
     { value: '#css', label: 'css' },
     { value: '#html', label: 'html' },
     { value: '#php', label: 'php' },
@@ -244,7 +245,7 @@ export default function ProjectShowcase() {
         imgLocation={'https://imgur.com/z9OgvV4.gif'}
         languageTagsSelected={languageTags}
         typeTagsSelected={typeTags}
-        description={[' I wanted to practice game asset modelling and was playing quite a bit of Vanilla Minecraft with friends at the time. Blockbench was officially released as a toolset by the Mojang team and I wanted to learn this toolkit as well. Using Blockbench, I designed a custom crossbow with loading animations, 2D (retexture) and 3D (model) custom swords, as well as some tools like shovels and hoes. I packed up my models as a resource pack and provided it to friends.', ' By using the optifine mod in game, I was able to include rules for when the new models should be rendered, for example if a crossbow was named "Pierson" it would render as the custom model I designed. I also experimented with changing up the villager skins to be custom full skin retextures including rules for where they would spawn with these models versus the regular villager textures.']}
+        description={[' This project was to practice game asset modelling and I was playing quite a bit of Vanilla Minecraft with friends at the time. Blockbench was officially released as a toolset by the Mojang team and I wanted to learn this toolkit as well. Using Blockbench, I designed a custom crossbow with loading animations, 2D (retexture) and 3D (model) custom swords, as well as some tools like shovels and hoes. I packed up my models as a resource pack and provided it to friends.', ' By using the optifine mod in game, I was able to include rules for when the new models should be rendered, for example if a crossbow was named "Pierson" it would render as the custom model I designed. I also experimented with changing up the villager skins to be custom full skin retextures including rules for where they would spawn with these models versus the regular villager textures.']}
       />
       <ProjectCard
         title={'Random Noise Generator CLI Tool Rust'}
@@ -334,7 +335,7 @@ export default function ProjectShowcase() {
         typeTags={['#opensource', '#fastify', '#npm']}
         languageTagsSelected={languageTags}
         typeTagsSelected={typeTags}
-        description={[' I created this to solve a distributed data problem for work. I needed a plugin that simplified setting up a pub/sub connection using Redis as a broker. Fastify has a great Redis plugin but no support for a pub/sub connection. This project did not take long and I was able to use it for work as well as release it through npm.']}
+        description={[' This project was created to solve a distributed data problem for work. I needed a plugin that simplified setting up a pub/sub connection using Redis as a broker. Fastify has a great Redis plugin but no support for a pub/sub connection. This project did not take long and I was able to use it for work as well as release it through npm.']}
       />
       <ProjectCard
         title={'Simple-Es'}
@@ -357,7 +358,7 @@ export default function ProjectShowcase() {
         typeTags={['#engine', '#game-design', '#gtk']}
         languageTagsSelected={languageTags}
         typeTagsSelected={typeTags}
-        description={[' I had previously done some game design work in Rust and wanted to try building a new Rust game engine for personal use to save on license costs. Amethyst is a great Rust engine but does not have an intuitive user interface like Unity, which has sped up my game design. This was sorta a side project and I spent some time working in gtk to build out a basic file menu interface. I definitely want to go this route in the future, but plan to have a couple game releases using Unity or UnrealEngine before tackling this project. For that reason, I have shelved this project.']}
+        description={[' Previously I had done some game design work in Rust and wanted to try building a new Rust game engine for personal use to save on license costs. Amethyst is a great Rust engine but does not have an intuitive user interface like Unity, which has sped up my game design. This was sorta a side project and I spent some time working in gtk to build out a basic file menu interface. I definitely want to go this route in the future, but plan to have a couple game releases using Unity or UnrealEngine before tackling this project. For that reason, I have shelved this project.']}
       />
       <ProjectCard
         title={'Blog the Blob'}
@@ -417,7 +418,7 @@ export default function ProjectShowcase() {
         typeTags={['#game-design']}
         languageTagsSelected={languageTags}
         typeTagsSelected={typeTags}
-        description={[' I was playing a lot of roguelite games around this time and realized that there was not a roguelite turn based strategy game, and I think it would make for a very satisfying cross genre. This project was mostly research and planning. I have a few notebooks where I have written out the job trees, map generation, and randomization to balance the strategic portions and the roguelite "react based on what is being given to the player randomly".', ' I am just as excited about this project today as I was when I originally had the idea, but I want to get more experience in game design first before attempting this project. It will kinda be a like Final Fantasy Tactics for PSX with randomization factors for maps and characters that join you as you get closer to the chaos that is the Rift. I started this project in Golang as I did not want to start game design in C++ or C# at this time. Golang had some good tools for 2D game development. I moved this project over to Rust after discovering that it has a much broader and deeper set of tools and packages for game development.']}
+        description={[' At this time, I was playing a lot of roguelite games and realized that there was not a roguelite turn based strategy game, and I think it would make for a very satisfying cross genre. This project was mostly research and planning. I have a few notebooks where I have written out the job trees, map generation, and randomization to balance the strategic portions and the roguelite "react based on what is being given to the player randomly".', ' I am just as excited about this project today as I was when I originally had the idea, but I want to get more experience in game design first before attempting this project. It will kinda be a like Final Fantasy Tactics for PSX with randomization factors for maps and characters that join you as you get closer to the chaos that is the Rift. I started this project in Golang as I did not want to start game design in C++ or C# at this time. Golang had some good tools for 2D game development. I moved this project over to Rust after discovering that it has a much broader and deeper set of tools and packages for game development.']}
       />
       <ProjectCard
         title={'Voyager Travel App'}
@@ -472,7 +473,7 @@ export default function ProjectShowcase() {
         typeTags={['#game-design','#boardgame','#ai']}
         languageTagsSelected={languageTags}
         typeTagsSelected={typeTags}
-        description={[' I wanted to learn programming over a summer break period, so I opted to try to build Settlers of Catan, the board game, in C++. It was a successful project, that is now lost on an old computer drive somewhere. I was able to practice a few techniques with this project, like using recursion to implement the longest road evaluator. Some of the more tricky parts were getting the AI computer players to change their gameplay tactics depending on how much space there was around them and the overall stage of the game. The game itself was rendered via ASCII art in the terminal and you could see your hand via text. It was a fun project, and resulted in a fun game that I played time to time in lunch breaks while working in a lab.']}
+        description={[' Over a summer break period I wanted to learn programming in C++, so I opted to try to build Settlers of Catan, the board game, in C++. It was a successful project, that is now lost on an old computer drive somewhere. I was able to practice a few techniques with this project, like using recursion to implement the longest road evaluator. Some of the more tricky parts were getting the AI computer players to change their gameplay tactics depending on how much space there was around them and the overall stage of the game. The game itself was rendered via ASCII art in the terminal and you could see your hand via text. It was a fun project, and resulted in a fun game that I played time to time in lunch breaks while working in a lab.']}
       />
     </div>
   );
