@@ -181,7 +181,7 @@ export default function ProjectShowcase() {
         outcome={'released'}
         languageTags={['#java', '#blockbench']}
         typeTags={['#minecraft','#mod','#forge','#game-design','#modelling','#accessibility']}
-        imgLocation={'https://imgur.com/C31VKMR.gif'}
+        imgLocation={'https://imgur.com/znG9siv.gif'}
         languageTagsSelected={languageTags}
         typeTagsSelected={typeTags}
         source={'https://legacy.curseforge.com/minecraft/mc-mods/patchworktotems'}
