@@ -8,7 +8,6 @@ export default function Benjamin() {
   return (
     <div>
       <TitleBlock />
-      <IntroBlock />
       <ExperiencePlotFigure 
         options={{
           marginTop: 20,
