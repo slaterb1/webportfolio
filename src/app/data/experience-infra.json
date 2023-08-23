@@ -13,6 +13,7 @@
   { "Year": "2023", "Language": "GCP" },
   { "Year": "2022", "Language": "Azure" },
   { "Year": "2023", "Language": "Azure" },
+  { "Year": "2021", "Language": "Terraform" },
   { "Year": "2022", "Language": "Terraform" },
   { "Year": "2023", "Language": "Terraform" }
 ]
