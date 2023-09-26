@@ -61,10 +61,18 @@ body {
   left: 50px;
 }
 
+/*
 .image-block {
   float: left;
   border-width: 5px;
   border-block-color: white;
+}
+*/
+
+.image-block {
+  float: left;
+  position: relative;
+  top: 5px;
 }
 
 .name-block {
