@@ -1,7 +1,8 @@
 'use client';
 
 import Image from 'next/image'
-import profilePic from './public/minimized_side_profile.jpg'
+// import profilePic from './public/minimized_side_profile.jpg'
+import profilePic from './public/Benjamin_Slater_Profile.png'
 import emailLogo from './public/email-logo.png';
 import personLogo from './public/person-logo.png';
 import githubLogo from './public/github-mark.png';
